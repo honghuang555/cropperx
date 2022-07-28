@@ -150,7 +150,7 @@ class _CropperState extends State<Cropper> {
                             return widget.image;
                           },
                         ),
-                        minScale: 0.1,
+                        minScale: 1,
                         maxScale: widget.zoomScale,
                       );
                     },
