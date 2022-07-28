@@ -129,6 +129,7 @@ class _CropperState extends State<Cropper> {
                   aspectRatio: widget.aspectRatio,
                   child: LayoutBuilder(
                     builder: (_, constraint) {
+                      print('customized aspect ratio');
                       return InteractiveViewer(
                         clipBehavior: Clip.none,
                         transformationController: _transformationController,
@@ -150,7 +151,7 @@ class _CropperState extends State<Cropper> {
                             return widget.image;
                           },
                         ),
-                        minScale: 1,
+                        minScale: widget.zoomScale,
                         maxScale: widget.zoomScale,
                       );
                     },
